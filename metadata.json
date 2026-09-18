@@ -1,0 +1,7 @@
+{
+  "name": "Zip Explorer",
+  "description": "Browse and extract individual files from ZIP archives without extracting all files at once.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

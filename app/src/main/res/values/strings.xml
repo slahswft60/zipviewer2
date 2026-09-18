@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Zip Explorer</string>
+    <string name="btn_pick_zip">Select ZIP Archive</string>
+    <string name="status_no_file">No ZIP archive selected. Tap the button above to pick a file.</string>
+    <string name="status_reading">Reading ZIP archive contents…</string>
+    <string name="status_loaded">Archive loaded: %1$d files found. Tap any file to extract it.</string>
+    <string name="status_extracting">Extracting %1$s…</string>
+    <string name="status_extracted_success">Successfully saved %1$s</string>
+    <string name="status_error">Error: %1$s</string>
+    <string name="tap_to_extract">Tap to extract and save</string>
+    <string name="folder_indicator">Directory</string>
+    <string name="search_hint">Filter files in archive…</string>
+</resources>
