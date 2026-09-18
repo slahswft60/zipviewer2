@@ -9,12 +9,25 @@ public class ZipEntryItem {
     private final long size;
     private final long compressedSize;
     private final boolean isDirectory;
+    private final String remoteUrl;
+    private final long localHeaderOffset;
+    private final int compressionMethod;
+    private final String archiveType;
 
     public ZipEntryItem(String path, long size, long compressedSize, boolean isDirectory) {
+        this(path, size, compressedSize, isDirectory, null, 0, 0, "ZIP");
+    }
+
+    public ZipEntryItem(String path, long size, long compressedSize, boolean isDirectory,
+                        String remoteUrl, long localHeaderOffset, int compressionMethod, String archiveType) {
         this.path = path != null ? path : "";
         this.size = size;
         this.compressedSize = compressedSize;
         this.isDirectory = isDirectory;
+        this.remoteUrl = remoteUrl;
+        this.localHeaderOffset = localHeaderOffset;
+        this.compressionMethod = compressionMethod;
+        this.archiveType = archiveType != null ? archiveType : "ZIP";
 
         // Calculate simple display name from path
         String cleanPath = this.path;
@@ -92,5 +105,25 @@ public class ZipEntryItem {
             return 3; // Archive
         }
         return 0; // Generic file
+    }
+
+    public String getRemoteUrl() {
+        return remoteUrl;
+    }
+
+    public long getLocalHeaderOffset() {
+        return localHeaderOffset;
+    }
+
+    public int getCompressionMethod() {
+        return compressionMethod;
+    }
+
+    public String getArchiveType() {
+        return archiveType;
+    }
+
+    public boolean isRemote() {
+        return remoteUrl != null && !remoteUrl.isEmpty();
     }
 }

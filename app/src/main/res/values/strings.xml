@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Zip Explorer</string>
+    <string name="zip_analyzer_title">محلل ملفات ZIP</string>
+    <string name="analyzer_description">تقوم هذه الأداة بتحليل الملفات المضغوطة وعرض قائمة المحتويات دون تنزيلها، مع إمكانية تنزيل ملفات محددة فقط دون الحاجة لتحميل الأرشيف بالكامل.</string>
+    <string name="example_link_label">مثال على الرابط:</string>
+    <string name="supported_formats">الصيغ المدعومة : ZIP - tar - tar.md5</string>
+    <string name="url_input_hint">رابط ملف ZIP</string>
+    <string name="start_analysis">بدء التحليل</string>
+    <string name="pick_local_file">أو استعراض ملف محلي من الهاتف</string>
+    <string name="analyzing_remote">جاري الاتصال وتحليل محتويات الأرشيف عن بُعد…</string>
+    <string name="analyzed_success">تم تحليل الأرشيف: عُثر على %1$d ملف</string>
     <string name="btn_pick_zip">Select ZIP Archive</string>
     <string name="status_no_file">No ZIP archive selected. Tap the button above to pick a file.</string>
     <string name="status_reading">Reading ZIP archive contents…</string>
@@ -9,5 +18,5 @@
     <string name="status_error">Error: %1$s</string>
     <string name="tap_to_extract">Tap to extract and save</string>
     <string name="folder_indicator">Directory</string>
-    <string name="search_hint">Filter files in archive…</string>
+    <string name="search_hint">بحث في محتويات الأرشيف…</string>
 </resources>

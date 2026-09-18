@@ -175,14 +175,14 @@ fun ZipFilesLazyColumn(
                 )
                 Spacer(modifier = Modifier.height(12.dp))
                 Text(
-                    text = "No files match your search",
+                    text = "لا توجد ملفات تطابق البحث",
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Try clearing the search filter above.",
+                    text = "جرّب مسح نص البحث أعلاه لعرض جميع المحتويات.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -228,11 +228,14 @@ fun ZipEntryRowItem(
         modifier = modifier
             .fillMaxWidth()
             .testTag("zip_file_item_$index"),
-        shape = RoundedCornerShape(12.dp),
+        shape = RoundedCornerShape(14.dp),
         colors = CardDefaults.outlinedCardColors(
-            containerColor = MaterialTheme.colorScheme.surface
+            containerColor = Color(0xFF101B35)
         ),
-        elevation = CardDefaults.outlinedCardElevation(defaultElevation = 1.dp)
+        border = CardDefaults.outlinedCardBorder().copy(
+            brush = androidx.compose.ui.graphics.SolidColor(Color(0xFF1B284A))
+        ),
+        elevation = CardDefaults.outlinedCardElevation(defaultElevation = 0.dp)
     ) {
         Row(
             modifier = Modifier
@@ -270,7 +273,7 @@ fun ZipEntryRowItem(
                     fontWeight = FontWeight.SemiBold,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    color = MaterialTheme.colorScheme.onSurface
+                    color = Color.White
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
@@ -278,7 +281,7 @@ fun ZipEntryRowItem(
                     style = MaterialTheme.typography.bodySmall,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    color = Color(0xFF94A3B8)
                 )
             }
 
@@ -289,13 +292,13 @@ fun ZipEntryRowItem(
             ) {
                 Surface(
                     shape = RoundedCornerShape(6.dp),
-                    color = if (item.isDirectory) MaterialTheme.colorScheme.surfaceVariant else Color(0xFFF1F5F9)
+                    color = Color(0xFF1B284A)
                 ) {
                     Text(
                         text = item.formattedSize,
                         style = MaterialTheme.typography.labelSmall,
                         fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        color = Color(0xFFCBD5E1),
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
                     )
                 }
@@ -308,16 +311,16 @@ fun ZipEntryRowItem(
                     ) {
                         Icon(
                             imageVector = Icons.Default.FileDownload,
-                            contentDescription = "Extract",
-                            tint = MaterialTheme.colorScheme.primary,
+                            contentDescription = "تنزيل",
+                            tint = Color(0xFF00B4D8),
                             modifier = Modifier.size(13.dp)
                         )
                         Spacer(modifier = Modifier.width(2.dp))
                         Text(
-                            text = "Extract",
+                            text = "تنزيل",
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.primary
+                            color = Color(0xFF00B4D8)
                         )
                     }
                 }
